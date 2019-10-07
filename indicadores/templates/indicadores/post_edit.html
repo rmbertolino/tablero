@@ -1,0 +1,14 @@
+{% extends 'indicadores/base.html' %}
+
+{% block content %}
+    <h2>New post</h2>
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary btn-icon-split">
+            <span class="icon text-white-50">
+                <i class="fas fa-save"></i>
+            </span>            
+            <span class="text">Guardar</span>
+        </button>
+    </form>
+{% endblock %}
